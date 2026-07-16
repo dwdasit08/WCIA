@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Photo Gallery – WCIA</title>
+    <meta name="description" content="Browse photos from WCIA events and matches." />
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="apple-touch-icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-180x180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">...</div>
+    <!-- HEADER with Gallery active -->
+    <header class="main-header" id="mainHeader">
+        ...
+        <nav>
+            <ul>
+                ...
+                <li>
+                    <a href="gallery.html" class="active">Gallery <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="photo-gallery.html" class="active">Photo Gallery</a></li>
+                        <li><a href="video-gallery.html">Video Gallery</a></li>
+                    </ul>
+                </li>
+                ...
+            </ul>
+        </nav>
+    </header>
+    <!-- HERO -->
+    <section class="hero" style="min-height:50vh;">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="badge"><i class="fas fa-camera"></i> Moments Captured</div>
+            <h1>Photo <span style="color:var(--gold);">Gallery</span></h1>
+            <p>Explore our collection of photographs from national championships, training camps, and community events.</p>
+        </div>
+    </section>
+    <!-- Full Gallery Grid (more items) -->
+    <section class="gallery-section" style="padding:60px 0;">
+        <div class="container">
+            <div class="gallery-grid">
+                <!-- Repeat many gallery items -->
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/2nd-National-Wheelchair-Cricket-Championship-300x200.jpg" alt="2nd National Championship" loading="lazy" />
+                    <div class="overlay"><h5>2nd National Championship</h5></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2025/02/WhatsApp-Image-2025-02-07-at-12.26.25-PM-1-300x200.jpeg" alt="4th National Championship" loading="lazy" />
+                    <div class="overlay"><h5>4th National Championship</h5></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/1548129008-IMG-20170120-WA0008-300x225.jpg" alt="Bangalore April 2017" loading="lazy" />
+                    <div class="overlay"><h5>Bangalore April 2017</h5></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/1548129821-IMG-20170116-WA0015-300x170.jpg" alt="General" loading="lazy" />
+                    <div class="overlay"><h5>General</h5></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/1554744967-IMG_9791-300x200.jpg" alt="2nd National Championship" loading="lazy" />
+                    <div class="overlay"><h5>2nd National Championship</h5></div>
+                </div>
+                <div class="g-item">
+                    <img src="https://wcia.tv/wp-content/uploads/2021/10/Ind-vs-Pakistan-300x200.jpg" alt="Ind vs Pakistan" loading="lazy" />
+                    <div class="overlay"><h5>Ind vs Pakistan</h5></div>
+                </div>
+                <!-- Add more -->
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

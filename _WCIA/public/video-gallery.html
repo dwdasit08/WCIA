@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Video Gallery – WCIA</title>
+    <meta name="description" content="Watch videos of WCIA matches, interviews, and events." />
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="apple-touch-icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-180x180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">...</div>
+    <!-- HEADER -->
+    <header class="main-header" id="mainHeader">
+        ...
+        <nav>
+            <ul>
+                ...
+                <li>
+                    <a href="gallery.html" class="active">Gallery <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="photo-gallery.html">Photo Gallery</a></li>
+                        <li><a href="video-gallery.html" class="active">Video Gallery</a></li>
+                    </ul>
+                </li>
+                ...
+            </ul>
+        </nav>
+    </header>
+    <!-- HERO -->
+    <section class="hero" style="min-height:50vh;">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="badge"><i class="fas fa-video"></i> Watch and Inspire</div>
+            <h1>Video <span style="color:var(--gold);">Gallery</span></h1>
+            <p>Watch match highlights, player interviews, and event recaps from WCIA.</p>
+        </div>
+    </section>
+    <!-- Video Grid (more videos) -->
+    <section class="video-section" style="padding:60px 0;">
+        <div class="container">
+            <div class="video-grid">
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/6csW99nAjsQ" title="WCIA Video 1" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/aSIIeoTgZZc" title="WCIA Video 2" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/6SiQrpj2cQM" title="WCIA Video 3" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <div class="video-card">
+                    <div class="video-wrapper">
+                        <iframe src="https://www.youtube.com/embed/8BOXCCtPUlc" title="WCIA Video 4" loading="lazy" allowfullscreen></iframe>
+                    </div>
+                </div>
+                <!-- Add more videos -->
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

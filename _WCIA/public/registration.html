@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration – WCIA</title>
+    <meta name="description" content="Register as a wheelchair cricketer with WCIA." />
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="apple-touch-icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-180x180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">...</div>
+    <!-- HEADER -->
+    <header class="main-header" id="mainHeader">
+        ...
+        <nav>
+            <ul>
+                ...
+                <li>
+                    <a href="get-involved.html" class="active">Get Involved <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="registration.html" class="active">Registration</a></li>
+                        <li><a href="pay-online.html">Pay Online</a></li>
+                        <li><a href="registration-details.html">Registration Details</a></li>
+                        <li><a href="membership-renewal.html">Membership Renewal</a></li>
+                    </ul>
+                </li>
+                ...
+            </ul>
+        </nav>
+    </header>
+    <!-- HERO -->
+    <section class="hero" style="min-height:50vh;">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="badge"><i class="fas fa-edit"></i> Join the Team</div>
+            <h1>Player <span style="color:var(--gold);">Registration</span></h1>
+            <p>Fill in your details to become a part of the WCIA player database.</p>
+        </div>
+    </section>
+    <!-- Registration Form -->
+    <section class="section-padding" style="background:var(--primary);">
+        <div class="container">
+            <div style="max-width:600px;margin:0 auto;background:rgba(255,255,255,0.04);padding:40px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.06);">
+                <h2 style="color:var(--gold);text-align:center;margin-bottom:24px;">Player Registration Form</h2>
+                <form>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Full Name *</label>
+                        <input type="text" name="fullname" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Date of Birth</label>
+                        <input type="date" name="dob" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Email *</label>
+                        <input type="email" name="email" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Phone *</label>
+                        <input type="tel" name="phone" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">State</label>
+                        <select name="state" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;">
+                            <option>Select State</option>
+                            <option>Andhra Pradesh</option>
+                            <option>Karnataka</option>
+                            <option>Uttar Pradesh</option>
+                            <option>Maharashtra</option>
+                            <option>Delhi</option>
+                            <option>Others</option>
+                        </select>
+                    </div>
+                    <div style="margin-bottom:24px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Disability Type</label>
+                        <input type="text" name="disability" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Submit Registration</button>
+                </form>
+                <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px;text-align:center;">You will receive a 12‑digit registration ID after submission.</p>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

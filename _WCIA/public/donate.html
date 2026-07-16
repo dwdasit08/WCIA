@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Donate – WCIA</title>
+    <meta name="description" content="Support wheelchair cricket in India – donate to WCIA." />
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="apple-touch-icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-180x180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- TOP BAR (same as index) -->
+    <div class="top-bar">...</div>
+    <!-- HEADER with donate active -->
+    <header class="main-header" id="mainHeader">
+        <div class="container">
+            <a href="index.html" class="logo">...</a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About Us <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown"><li><a href="our-team.html">Our Team</a></li></ul>
+                    </li>
+                    <li><a href="gallery.html">Gallery <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="photo-gallery.html">Photo Gallery</a></li>
+                            <li><a href="video-gallery.html">Video Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="sewa-niketan.html">Sewa Niketan</a></li>
+                    <li><a href="get-involved.html">Get Involved <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="registration.html">Registration</a></li>
+                            <li><a href="pay-online.html">Pay Online</a></li>
+                            <li><a href="registration-details.html">Registration Details</a></li>
+                            <li><a href="membership-renewal.html">Membership Renewal</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="our-campaigns.html">Our Campaigns <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="drive-with-ability.html">Drive With Ability</a></li>
+                            <li><a href="ladakh-expedition.html">Ladakh Expedition</a></li>
+                            <li><a href="notice-karo-india.html">#NoticeKaroIndia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="donate.html" class="donate-btn active"><i class="fas fa-heart" style="color:#ff6b6b;margin-right:6px;"></i> Donate Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- HERO -->
+    <section class="hero" style="min-height:50vh;">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="badge"><i class="fas fa-hand-holding-heart"></i> Support the Cause</div>
+            <h1>Donate <span style="color:var(--gold);">Now</span></h1>
+            <p>Your contribution helps us provide equipment, training, and opportunities for wheelchair cricketers across India. Every rupee counts.</p>
+        </div>
+    </section>
+    <!-- Donation Form -->
+    <section class="section-padding" style="background:var(--primary);">
+        <div class="container">
+            <div style="max-width:600px;margin:0 auto;background:rgba(255,255,255,0.04);padding:40px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.06);">
+                <h2 style="color:var(--gold);text-align:center;margin-bottom:24px;">Make a Donation</h2>
+                <form id="donateForm">
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Full Name *</label>
+                        <input type="text" name="name" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Email *</label>
+                        <input type="email" name="email" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Amount (₹) *</label>
+                        <input type="number" name="amount" required min="1" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:24px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Payment Method</label>
+                        <select name="paymentMethod" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;">
+                            <option value="UPI">UPI</option>
+                            <option value="Credit Card">Credit Card</option>
+                            <option value="Debit Card">Debit Card</option>
+                            <option value="Net Banking">Net Banking</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width:100%;">Donate Now</button>
+                </form>
+                <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px;text-align:center;">* 80G tax exemption available. You will receive a receipt via email.</p>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER (same) -->
+    <footer class="main-footer">...</footer>
+    <script src="js/main.js"></script>
+</body>
+</html>

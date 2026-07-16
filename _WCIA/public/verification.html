@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Verification – WCIA</title>
+    <meta name="description" content="Verify your 12-digit WCIA registration ID." />
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="apple-touch-icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-180x180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">...</div>
+    <!-- HEADER (with no active on verification) -->
+    <header class="main-header" id="mainHeader">...</header>
+    <!-- HERO -->
+    <section class="hero" style="min-height:50vh;">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="badge"><i class="fas fa-shield-alt"></i> Verify Your ID</div>
+            <h1>Verification <span style="color:var(--gold);">Portal</span></h1>
+            <p>Enter your 12‑digit registration ID to verify your membership or participation status.</p>
+        </div>
+    </section>
+    <!-- Verification Form -->
+    <section class="section-padding" style="background:var(--primary);">
+        <div class="container">
+            <div style="max-width:500px;margin:0 auto;background:rgba(255,255,255,0.04);padding:40px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.06);">
+                <h2 style="color:var(--gold);text-align:center;margin-bottom:24px;">Enter 12‑Digit ID</h2>
+                <form id="verifyForm">
+                    <input type="text" id="verificationId" placeholder="e.g. 123456789012" maxlength="12" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1.2rem;text-align:center;letter-spacing:4px;margin-bottom:20px;" />
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Verify</button>
+                </form>
+                <div id="verificationResult" style="margin-top:20px;text-align:center;font-weight:600;"></div>
+                <p style="color:var(--text-muted);font-size:0.8rem;text-align:center;margin-top:16px;">If you haven't registered, <a href="registration.html">click here to register</a>.</p>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script>
+        document.getElementById('verifyForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const id = document.getElementById('verificationId').value.trim();
+            const resultDiv = document.getElementById('verificationResult');
+            if (id.length !== 12 || !/^\d{12}$/.test(id)) {
+                resultDiv.innerHTML = '<span style="color:var(--accent);">❌ Please enter a valid 12‑digit numeric ID.</span>';
+                return;
+            }
+            // Mock verification – in reality, call server API
+            // Simulate check: if ID starts with '2026' then valid, else invalid
+            if (id.startsWith('2026')) {
+                resultDiv.innerHTML = '<span style="color:var(--gold);">✅ Verified! Your registration is active.</span>';
+            } else {
+                resultDiv.innerHTML = '<span style="color:var(--accent);">❌ ID not found. Please check or register.</span>';
+            }
+        });
+    </script>
+</body>
+</html>

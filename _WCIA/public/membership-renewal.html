@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Membership Renewal – WCIA</title>
+    <meta name="description" content="Renew your WCIA membership." />
+    <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
+    <link rel="apple-touch-icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-180x180.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+    <!-- TOP BAR -->
+    <div class="top-bar">...</div>
+    <!-- HEADER -->
+    <header class="main-header" id="mainHeader">
+        ...
+        <nav>
+            <ul>
+                ...
+                <li>
+                    <a href="get-involved.html" class="active">Get Involved <i class="fas fa-chevron-down"></i></a>
+                    <ul class="dropdown">
+                        <li><a href="registration.html">Registration</a></li>
+                        <li><a href="pay-online.html">Pay Online</a></li>
+                        <li><a href="registration-details.html">Registration Details</a></li>
+                        <li><a href="membership-renewal.html" class="active">Membership Renewal</a></li>
+                    </ul>
+                </li>
+                ...
+            </ul>
+        </nav>
+    </header>
+    <!-- HERO -->
+    <section class="hero" style="min-height:50vh;">
+        <div class="overlay"></div>
+        <div class="hero-content">
+            <div class="badge"><i class="fas fa-redo"></i> Stay Connected</div>
+            <h1>Membership <span style="color:var(--gold);">Renewal</span></h1>
+            <p>Renew your WCIA membership to continue being part of the community.</p>
+        </div>
+    </section>
+    <!-- Renewal Form -->
+    <section class="section-padding" style="background:var(--primary);">
+        <div class="container">
+            <div style="max-width:500px;margin:0 auto;background:rgba(255,255,255,0.04);padding:40px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.06);">
+                <h2 style="color:var(--gold);text-align:center;margin-bottom:24px;">Renewal Form</h2>
+                <form>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Registration ID *</label>
+                        <input type="text" name="regid" required maxlength="12" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Full Name *</label>
+                        <input type="text" name="name" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:24px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Renewal Fee (₹)</label>
+                        <input type="number" name="fee" value="500" readonly style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;opacity:0.7;" />
+                    </div>
+                    <button type="submit" class="btn btn-gold" style="width:100%;">Renew Now</button>
+                </form>
+                <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px;text-align:center;">You will be redirected to payment after renewal.</p>
+            </div>
+        </div>
+    </section>
+    <!-- FOOTER -->
+    <footer class="main-footer">...</footer>
+    <script src="js/main.js"></script>
+</body>
+</html>
