@@ -12,53 +12,268 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
+    <style>
+        .detail-card {
+            background: rgba(255,255,255,0.04);
+            border-radius: var(--radius);
+            padding: 24px;
+            border: 1px solid rgba(255,255,255,0.06);
+            margin-top: 20px;
+        }
+        .detail-card .row {
+            display: flex;
+            justify-content: space-between;
+            padding: 12px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .detail-card .row:last-child {
+            border-bottom: none;
+        }
+        .detail-card .label {
+            color: var(--text-muted);
+            font-weight: 300;
+        }
+        .detail-card .value {
+            color: var(--white);
+            font-weight: 600;
+            text-align: right;
+        }
+        .not-found {
+            text-align: center;
+            color: var(--accent);
+            font-weight: 600;
+            padding: 20px;
+        }
+        .hidden {
+            display: none !important;
+        }
+        #detailsResult {
+            transition: all 0.3s ease;
+        }
+    </style>
 </head>
 <body>
     <!-- TOP BAR -->
-    <div class="top-bar">...</div>
+    <div class="top-bar">
+        <div class="container">
+            <div class="top-bar-left">
+                <a href="#"><i class="fas fa-sticky-note"></i> REG NO. - U74999UP2018NPL100302</a>
+                <a href="mailto:office@wcia.tv"><i class="far fa-envelope"></i> office@wcia.tv</a>
+                <a href="tel:7007056067"><i class="fas fa-phone-alt"></i> (+91) 7007056067</a>
+            </div>
+            <div class="top-bar-right">
+                <a href="https://www.facebook.com/wccricketindia/" target="_blank" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://twitter.com/wcia_official" target="_blank" class="social-link"><i class="fab fa-x-twitter"></i></a>
+                <a href="https://www.linkedin.com/in/wheelchair-cricket-india-association-10930016b/" target="_blank" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://www.instagram.com/wcia.official/" target="_blank" class="social-link"><i class="fab fa-instagram"></i></a>
+                <a href="https://www.youtube.com/@wcia.official" target="_blank" class="live-btn"><i class="fas fa-circle" style="color:#ff0000;font-size:0.5rem;"></i> Watch Live</a>
+            </div>
+        </div>
+    </div>
+
     <!-- HEADER -->
     <header class="main-header" id="mainHeader">
-        ...
-        <nav>
-            <ul>
-                ...
-                <li>
-                    <a href="get-involved.html" class="active">Get Involved <i class="fas fa-chevron-down"></i></a>
-                    <ul class="dropdown">
-                        <li><a href="registration.html">Registration</a></li>
-                        <li><a href="pay-online.html">Pay Online</a></li>
-                        <li><a href="registration-details.html" class="active">Registration Details</a></li>
-                        <li><a href="membership-renewal.html">Membership Renewal</a></li>
-                    </ul>
-                </li>
-                ...
-            </ul>
-        </nav>
+        <div class="container">
+            <a href="index.html" class="logo">
+                <img src="https://wcia.tv/wp-content/uploads/2021/10/WCIA-logo-1-scaled.png" alt="WCIA Logo" loading="lazy" />
+                <div class="logo-text">WHEELCHAIR CRICKET INDIA<span>Association</span></div>
+            </a>
+            <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+            <nav class="main-nav" id="mainNav">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li>
+                        <a href="about.html">About Us <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown"><li><a href="our-team.html">Our Team</a></li></ul>
+                    </li>
+                    <li>
+                        <a href="gallery.html">Gallery <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="photo-gallery.html">Photo Gallery</a></li>
+                            <li><a href="video-gallery.html">Video Gallery</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="blog.html">Blog</a></li>
+                    <li><a href="sewa-niketan.html">Sewa Niketan</a></li>
+                    <li>
+                        <a href="get-involved.html" class="active">Get Involved <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="registration.html">Registration</a></li>
+                            <li><a href="pay-online.html">Pay Online</a></li>
+                            <li><a href="registration-details.html" class="active">Registration Details</a></li>
+                            <li><a href="membership-renewal.html">Membership Renewal</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="our-campaigns.html">Our Campaigns <i class="fas fa-chevron-down"></i></a>
+                        <ul class="dropdown">
+                            <li><a href="drive-with-ability.html">Drive With Ability</a></li>
+                            <li><a href="ladakh-expedition.html">Ladakh Expedition</a></li>
+                            <li><a href="notice-karo-india.html">#NoticeKaroIndia</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="donate.html" class="donate-btn"><i class="fas fa-heart" style="color:#ff6b6b;margin-right:6px;"></i> Donate Us</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
+
     <!-- HERO -->
     <section class="hero" style="min-height:50vh;">
         <div class="overlay"></div>
         <div class="hero-content">
             <div class="badge"><i class="fas fa-id-card"></i> Check Status</div>
             <h1>Registration <span style="color:var(--gold);">Details</span></h1>
-            <p>Enter your registration ID to view your profile and status.</p>
+            <p>Enter your 12‑digit registration ID to view your profile and status.</p>
         </div>
     </section>
+
     <!-- Details Form -->
     <section class="section-padding" style="background:var(--primary);">
         <div class="container">
-            <div style="max-width:500px;margin:0 auto;background:rgba(255,255,255,0.04);padding:40px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.06);">
+            <div style="max-width:600px;margin:0 auto;background:rgba(255,255,255,0.04);padding:40px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.06);">
                 <h2 style="color:var(--gold);text-align:center;margin-bottom:24px;">Find Your Details</h2>
-                <form>
-                    <input type="text" placeholder="Enter 12-digit Registration ID" maxlength="12" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;text-align:center;letter-spacing:2px;margin-bottom:20px;" />
+                <form id="detailsForm">
+                    <input type="text" id="regIdInput" placeholder="Enter 12-digit Registration ID" maxlength="12" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;text-align:center;letter-spacing:2px;margin-bottom:20px;" />
                     <button type="submit" class="btn btn-primary" style="width:100%;">View Details</button>
                 </form>
+                <div id="detailsResult"></div>
                 <p style="color:var(--text-muted);font-size:0.85rem;margin-top:16px;text-align:center;">If you don't have an ID, <a href="registration.html">register now</a>.</p>
             </div>
         </div>
     </section>
+
     <!-- FOOTER -->
-    <footer class="main-footer">...</footer>
-    <script src="js/main.js"></script>
+    <footer class="main-footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="brand">
+                    <h3>WCIA</h3>
+                    <p>Wheelchair Cricket India Association — an 80G-approved non-profit dedicated to empowering persons with disabilities through the spirit of cricket.</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/wccricketindia/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://twitter.com/wcia_official" target="_blank"><i class="fab fa-x-twitter"></i></a>
+                        <a href="https://www.linkedin.com/in/wheelchair-cricket-india-association-10930016b/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://www.instagram.com/wcia.official/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.youtube.com/@wcia.official" target="_blank"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="col">
+                    <h4>Get Involved</h4>
+                    <ul>
+                        <li><a href="registration.html"><i class="fas fa-angle-right"></i> Registration</a></li>
+                        <li><a href="pay-online.html"><i class="fas fa-angle-right"></i> Pay Online</a></li>
+                        <li><a href="registration-details.html"><i class="fas fa-angle-right"></i> Registration Details</a></li>
+                        <li><a href="membership-renewal.html"><i class="fas fa-angle-right"></i> Membership Renewal</a></li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="index.html"><i class="fas fa-angle-right"></i> Home</a></li>
+                        <li><a href="about.html"><i class="fas fa-angle-right"></i> About Us</a></li>
+                        <li><a href="gallery.html"><i class="fas fa-angle-right"></i> Gallery</a></li>
+                        <li><a href="blog.html"><i class="fas fa-angle-right"></i> Blog</a></li>
+                        <li><a href="donate.html"><i class="fas fa-angle-right"></i> Donate Us</a></li>
+                    </ul>
+                </div>
+                <div class="col contact-col">
+                    <h4>Contact Us</h4>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> Regd Add: 16A, Kh. No.. 517, Ganeshpur Rehmanpur, Chinhut, Lucknow- 226028</li>
+                        <li><i class="fas fa-location-dot"></i> Corp. Add: B2/919, DLF MyPad, Vibhuti Khand, Gomti Nagar, Lucknow- 226010</li>
+                        <li><i class="fas fa-phone-alt"></i> <a href="tel:7007056067">(+91) 7007056067 (PRESIDENT)</a></li>
+                        <li><i class="fas fa-phone-alt"></i> (+91) 8765097543 (OFFICE)</li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:office@wcia.tv">office@wcia.tv</a></li>
+                        <li><i class="fas fa-globe"></i> <a href="https://wcia.tv" target="_blank">www.wcia.tv</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <span>&copy; 2026 Wheelchair Cricket India Association. All rights reserved.</span>
+                <span>Design With <i class="fas fa-heart heart"></i> By <a href="https://codingclave.tech/" target="_blank">Codingclave Technologies</a></span>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Details lookup logic
+        document.getElementById('detailsForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            const regId = document.getElementById('regIdInput').value.trim();
+            const resultDiv = document.getElementById('detailsResult');
+
+            // Validate 12-digit numeric
+            if (!/^\d{12}$/.test(regId)) {
+                resultDiv.innerHTML = '<div class="not-found">❌ Please enter a valid 12‑digit numeric ID.</div>';
+                return;
+            }
+
+            // Retrieve from localStorage
+            const allRegistrations = JSON.parse(localStorage.getItem('wcia_registrations')) || {};
+            const userData = allRegistrations[regId];
+
+            if (!userData) {
+                resultDiv.innerHTML = '<div class="not-found">❌ Registration ID not found. Please check the number or <a href="registration.html">register</a>.</div>';
+                return;
+            }
+
+            // Display details
+            resultDiv.innerHTML = `
+                <div class="detail-card">
+                    <h4 style="color:var(--gold);margin-bottom:16px;"><i class="fas fa-user-check"></i> Registration Details</h4>
+                    <div class="row"><span class="label">Registration Number</span><span class="value" style="color:var(--gold);font-weight:900;letter-spacing:2px;">${userData.regNumber}</span></div>
+                    <div class="row"><span class="label">Full Name</span><span class="value">${userData.fullname}</span></div>
+                    <div class="row"><span class="label">Date of Birth</span><span class="value">${userData.dob || 'Not provided'}</span></div>
+                    <div class="row"><span class="label">Email</span><span class="value">${userData.email}</span></div>
+                    <div class="row"><span class="label">Phone</span><span class="value">${userData.phone}</span></div>
+                    <div class="row"><span class="label">State</span><span class="value">${userData.state || 'Not provided'}</span></div>
+                    <div class="row"><span class="label">Disability Type</span><span class="value">${userData.disability || 'Not provided'}</span></div>
+                    <div style="text-align:center;margin-top:16px;">
+                        <a href="registration.html" class="btn btn-secondary" style="padding:8px 20px;font-size:0.8rem;">Edit Registration</a>
+                        <a href="membership-renewal.html" class="btn btn-gold" style="padding:8px 20px;font-size:0.8rem;margin-left:10px;">Renew Membership</a>
+                    </div>
+                </div>
+            `;
+        });
+
+        // Hamburger toggle (fallback)
+        (function() {
+            const hamburger = document.getElementById('hamburger');
+            const mainNav = document.getElementById('mainNav');
+            if (hamburger && mainNav) {
+                hamburger.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    this.classList.toggle('active');
+                    mainNav.classList.toggle('open');
+                });
+                document.querySelectorAll('.main-nav ul li a').forEach(link => {
+                    link.addEventListener('click', function(e) {
+                        const dropdown = this.nextElementSibling;
+                        if (dropdown && dropdown.classList.contains('dropdown')) {
+                            if (window.innerWidth <= 768) {
+                                e.preventDefault();
+                                dropdown.classList.toggle('open');
+                            }
+                        } else {
+                            if (window.innerWidth <= 768) {
+                                hamburger.classList.remove('active');
+                                mainNav.classList.remove('open');
+                            }
+                        }
+                    });
+                });
+                document.addEventListener('click', function(e) {
+                    if (window.innerWidth <= 768) {
+                        const header = document.getElementById('mainHeader');
+                        if (header && !header.contains(e.target)) {
+                            hamburger.classList.remove('active');
+                            mainNav.classList.remove('open');
+                        }
+                    }
+                });
+            }
+        })();
+    </script>
 </body>
 </html>
