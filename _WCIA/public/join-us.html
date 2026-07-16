@@ -3,20 +3,20 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Registration – WCIA</title>
-    <meta name="description" content="Register as a wheelchair cricketer with WCIA." />
+    <title>Join Us – WCIA</title>
+    <meta name="description" content="Join WCIA as a player, volunteer, or supporter." />
     <link rel="icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-32x32.png" />
     <link rel="apple-touch-icon" href="https://wcia.tv/wp-content/uploads/2026/03/cropped-imresizer-WCIA-logo-1-1-180x180.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&family=Open+Sans:wght@300;400;600;700&display=swap" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;600;700;900&family=Roboto:wght@300;400;500;700;900&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
     <link rel="stylesheet" href="css/styles.css" />
     <style>
-        /* Extra style for confirmation message */
+        /* Style for confirmation box */
         .confirmation-box {
-            background: rgba(245, 166, 35, 0.08);
-            border: 2px solid var(--gold);
+            background: rgba(230, 57, 70, 0.08);
+            border: 2px solid var(--accent);
             border-radius: var(--radius);
             padding: 24px;
             margin-top: 24px;
@@ -25,7 +25,7 @@
         .confirmation-box .reg-number {
             font-size: 2rem;
             font-weight: 900;
-            color: var(--gold);
+            color: var(--accent);
             letter-spacing: 4px;
             background: rgba(0,0,0,0.3);
             padding: 12px 24px;
@@ -42,10 +42,18 @@
         .hidden {
             display: none !important;
         }
+        /* Minor responsive tweaks */
+        @media (max-width: 480px) {
+            .confirmation-box .reg-number {
+                font-size: 1.4rem;
+                letter-spacing: 2px;
+                padding: 8px 16px;
+            }
+        }
     </style>
 </head>
 <body>
-    <!-- TOP BAR -->
+    <!-- TOP BAR (identical to index) -->
     <div class="top-bar">
         <div class="container">
             <div class="top-bar-left">
@@ -88,9 +96,9 @@
                     <li><a href="blog.html">Blog</a></li>
                     <li><a href="sewa-niketan.html">Sewa Niketan</a></li>
                     <li>
-                        <a href="get-involved.html" class="active">Get Involved <i class="fas fa-chevron-down"></i></a>
+                        <a href="get-involved.html">Get Involved <i class="fas fa-chevron-down"></i></a>
                         <ul class="dropdown">
-                            <li><a href="registration.html" class="active">Registration</a></li>
+                            <li><a href="registration.html">Registration</a></li>
                             <li><a href="pay-online.html">Pay Online</a></li>
                             <li><a href="registration-details.html">Registration Details</a></li>
                             <li><a href="membership-renewal.html">Membership Renewal</a></li>
@@ -114,25 +122,21 @@
     <section class="hero" style="min-height:50vh;">
         <div class="overlay"></div>
         <div class="hero-content">
-            <div class="badge"><i class="fas fa-edit"></i> Join the Team</div>
-            <h1>Player <span style="color:var(--gold);">Registration</span></h1>
-            <p>Fill in your details to become a part of the WCIA player database.</p>
+            <div class="badge"><i class="fas fa-handshake"></i> Become a Part</div>
+            <h1>Join <span style="color:var(--accent);">Us</span></h1>
+            <p>Whether you're a player, coach, volunteer, or supporter – we welcome you to the WCIA family.</p>
         </div>
     </section>
 
-    <!-- Registration Form -->
+    <!-- Join Form -->
     <section class="section-padding" style="background:var(--primary);">
         <div class="container">
             <div style="max-width:600px;margin:0 auto;background:rgba(255,255,255,0.04);padding:40px;border-radius:var(--radius);border:1px solid rgba(255,255,255,0.06);">
-                <h2 style="color:var(--gold);text-align:center;margin-bottom:24px;">Player Registration Form</h2>
-                <form id="registrationForm">
+                <h2 style="color:var(--accent);text-align:center;margin-bottom:24px;">Join WCIA</h2>
+                <form id="joinForm">
                     <div style="margin-bottom:16px;">
                         <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Full Name *</label>
-                        <input type="text" id="fullname" name="fullname" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
-                    </div>
-                    <div style="margin-bottom:16px;">
-                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Date of Birth</label>
-                        <input type="date" id="dob" name="dob" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                        <input type="text" id="fullname" name="name" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
                     </div>
                     <div style="margin-bottom:16px;">
                         <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Email *</label>
@@ -141,6 +145,16 @@
                     <div style="margin-bottom:16px;">
                         <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Phone *</label>
                         <input type="tel" id="phone" name="phone" required style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                    </div>
+                    <div style="margin-bottom:16px;">
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">I want to join as:</label>
+                        <select id="role" name="role" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;">
+                            <option value="Player">Player</option>
+                            <option value="Volunteer">Volunteer</option>
+                            <option value="Coach">Coach</option>
+                            <option value="Supporter / Donor">Supporter / Donor</option>
+                            <option value="Other">Other</option>
+                        </select>
                     </div>
                     <div style="margin-bottom:16px;">
                         <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">State</label>
@@ -156,27 +170,27 @@
                         </select>
                     </div>
                     <div style="margin-bottom:24px;">
-                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Disability Type</label>
-                        <input type="text" id="disability" name="disability" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;" />
+                        <label style="display:block;color:var(--text-light);font-weight:600;margin-bottom:6px;">Message / Comments</label>
+                        <textarea id="message" name="message" rows="3" style="width:100%;padding:12px;border-radius:8px;border:1px solid rgba(255,255,255,0.1);background:rgba(255,255,255,0.05);color:#fff;font-size:1rem;"></textarea>
                     </div>
-                    <button type="submit" class="btn btn-primary" style="width:100%;">Submit Registration</button>
+                    <button type="submit" class="btn btn-primary" style="width:100%;">Submit</button>
                 </form>
 
-                <!-- Confirmation Box (hidden initially) -->
+                <!-- Confirmation Box -->
                 <div id="confirmationBox" class="confirmation-box hidden">
-                    <i class="fas fa-check-circle" style="color:var(--gold);font-size:2rem;"></i>
-                    <h3 style="color:var(--white);margin-top:12px;">Registration Successful!</h3>
-                    <p style="color:var(--text-muted);">Your unique registration number is:</p>
-                    <div class="reg-number"><i class="fas fa-id-card"></i> <span id="regNumberDisplay">XXXXXXXXXXXX</span></div>
-                    <p style="color:var(--text-muted);font-size:0.9rem;">Please save this number. You will need it to check your registration details later.</p>
+                    <i class="fas fa-check-circle" style="color:var(--accent);font-size:2rem;"></i>
+                    <h3 style="color:var(--white);margin-top:12px;">Thank You for Joining!</h3>
+                    <p style="color:var(--text-muted);">Your registration number is:</p>
+                    <div class="reg-number"><i class="fas fa-id-card"></i> <span id="joinRegNumber">XXXXXXXXXXXX</span></div>
+                    <p style="color:var(--text-muted);font-size:0.9rem;">Please save this number for future reference. You may use it to check your status or renew your membership.</p>
                     <a href="registration-details.html" class="btn btn-secondary" style="margin-top:10px;">Check Details</a>
-                    <button onclick="resetForm()" class="btn btn-primary" style="margin-top:10px;margin-left:10px;">Register Another</button>
+                    <button onclick="resetForm()" class="btn btn-primary" style="margin-top:10px;margin-left:10px;">Submit Another</button>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- FOOTER -->
+    <!-- FOOTER (identical to index) -->
     <footer class="main-footer">
         <div class="container">
             <div class="footer-grid">
@@ -230,64 +244,9 @@
     </footer>
 
     <script>
-        // Shared JS for hamburger, etc. – included from main.js, but we add our own logic.
-        // Ensure main.js is loaded after this? We'll include our logic inline.
-
-        // Registration logic
-        document.getElementById('registrationForm').addEventListener('submit', function(e) {
-            e.preventDefault();
-
-            // Gather data
-            const fullname = document.getElementById('fullname').value.trim();
-            const dob = document.getElementById('dob').value;
-            const email = document.getElementById('email').value.trim();
-            const phone = document.getElementById('phone').value.trim();
-            const state = document.getElementById('state').value;
-            const disability = document.getElementById('disability').value.trim();
-
-            // Basic validation
-            if (!fullname || !email || !phone) {
-                alert('Please fill in all required fields (Name, Email, Phone).');
-                return;
-            }
-
-            // Generate unique 12-digit registration number
-            // Format: year + random 8 digits
-            const year = new Date().getFullYear();
-            const random = Math.floor(Math.random() * 100000000).toString().padStart(8, '0');
-            const regNumber = year + random; // 12 digits
-
-            // Create data object
-            const userData = {
-                fullname,
-                dob,
-                email,
-                phone,
-                state,
-                disability,
-                regNumber
-            };
-
-            // Store in localStorage (keyed by registration number)
-            let allRegistrations = JSON.parse(localStorage.getItem('wcia_registrations')) || {};
-            allRegistrations[regNumber] = userData;
-            localStorage.setItem('wcia_registrations', JSON.stringify(allRegistrations));
-
-            // Show confirmation
-            document.getElementById('regNumberDisplay').textContent = regNumber;
-            document.getElementById('confirmationBox').classList.remove('hidden');
-            document.getElementById('registrationForm').style.display = 'none';
-        });
-
-        function resetForm() {
-            document.getElementById('registrationForm').reset();
-            document.getElementById('registrationForm').style.display = 'block';
-            document.getElementById('confirmationBox').classList.add('hidden');
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        }
-
-        // Hamburger toggle (from main.js, but included here for completeness)
-        // We'll reuse main.js, but if not present, fallback.
+        /* ============================================================
+               HAMBURGER TOGGLE (fallback)
+            ============================================================ */
         (function() {
             const hamburger = document.getElementById('hamburger');
             const mainNav = document.getElementById('mainNav');
@@ -324,6 +283,76 @@
                 });
             }
         })();
+
+        /* ============================================================
+               JOIN FORM – GENERATE REGISTRATION ID
+            ============================================================ */
+        document.getElementById('joinForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            // Gather data
+            const fullname = document.getElementById('fullname').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const phone = document.getElementById('phone').value.trim();
+            const role = document.getElementById('role').value;
+            const state = document.getElementById('state').value;
+            const message = document.getElementById('message').value.trim();
+
+            // Basic validation
+            if (!fullname || !email || !phone) {
+                alert('Please fill in all required fields (Name, Email, Phone).');
+                return;
+            }
+
+            // Generate unique 12-digit registration number
+            const year = new Date().getFullYear();
+            const random = Math.floor(Math.random() * 100000000).toString().padStart(8, '0');
+            const regNumber = year + random; // e.g., 202612345678
+
+            // Create data object
+            const joinData = {
+                fullname,
+                email,
+                phone,
+                role,
+                state,
+                message,
+                regNumber,
+                dateSubmitted: new Date().toISOString()
+            };
+
+            // Store in localStorage (separate key from player registrations)
+            let allJoin = JSON.parse(localStorage.getItem('wcia_join_us')) || {};
+            allJoin[regNumber] = joinData;
+            localStorage.setItem('wcia_join_us', JSON.stringify(allJoin));
+
+            // Show confirmation
+            document.getElementById('joinRegNumber').textContent = regNumber;
+            document.getElementById('confirmationBox').classList.remove('hidden');
+            document.getElementById('joinForm').style.display = 'none';
+        });
+
+        function resetForm() {
+            document.getElementById('joinForm').reset();
+            document.getElementById('joinForm').style.display = 'block';
+            document.getElementById('confirmationBox').classList.add('hidden');
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        /* ============================================================
+               SCROLL REVEAL (optional)
+            ============================================================ */
+        const revealElements = document.querySelectorAll('.reveal');
+        if (revealElements.length) {
+            const revealObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+            revealElements.forEach(el => revealObserver.observe(el));
+        }
     </script>
 </body>
-                                </html>
+    </html>
